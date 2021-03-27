@@ -4,10 +4,11 @@ import sys
 
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-def main():
+def main(argv):
     print("Test")
-   
-    
+    print(argv)
+    test = "TEST"
+
 
 
 
@@ -16,4 +17,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])

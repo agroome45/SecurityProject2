@@ -1,14 +1,36 @@
 import sys
+import os
 
-
+import re
 
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-def main(argv):
-    print("Test")
-    print(argv)
-    test = "TEST"
 
+
+def tockenize(txt):
+    tockens = re.split(' +', txt)
+    return tockens
+
+def main(argv):
+    
+    
+    print("Opening file " ,argv)
+    
+    fileName = ""
+    
+    fileName = argv[0]
+    
+    file = open(fileName, "r")
+    
+    text = file.read()
+    
+    print(tockenize(text))
+    
+    
+    
+    print(text)
+    
+    
 
 
 

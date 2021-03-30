@@ -63,6 +63,7 @@ def main(argv):
     #print(text)
     
 def breakEncryption(orderedLetters, splitText):
+    print()
     return
         
     

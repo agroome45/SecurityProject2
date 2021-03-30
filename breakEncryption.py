@@ -63,21 +63,7 @@ def main(argv):
     #print(text)
     
 def breakEncryption(orderedLetters, splitText):
-    numSet = getNumSet(orderedLetters)
-    while(numSet == 32):
-        for i in range(len(splitText)):
-            set = getSet(orderedLetters)
-            key = getKey(orderedLetters)
-            wordHolder = splitText[i]
-            wordHolder.upper()
-            decryptHolder = decryptMessage(key, wordHolder)
-            if(len(decryptHolder) == 1):
-                if(wordHolder == 'A' or wordHolder == 'I'):
-                    
-            elif(len(decryptHolder) == 2):
-                print()
-            elif(len(decryptHolder) == 3):
-                print()
+    return
         
     
 def getNumSet(orderedLetters):
@@ -120,11 +106,13 @@ def getFrequencyCount(splitText, letters):
                     break 
 
 def setEncryptedLetter(orderedLetters):
-    for i in range(len(orderedLetters)):
-        orderedLetters[i].encryptedLetter = LetterFrequencyOrder[i]
-        if(orderedLetters[i].encryptedLetter == 'E'):
-            orderedLetters[i].set == True
-        
+   for i in range(len(orderedLetters)):
+        if(i == 0):
+           orderedLetters[i].encryptedLetter = 'E'
+        elif(i == 1):
+            orderedLetters[i].encryptedLetter = 'T' 
+        else:
+            orderedLetters[i].encryptedLetter = '?'
     
 def orderByFrequency(letters):
     sortedLetters = sorted(letters, key=operator.attrgetter("frequency")) 
